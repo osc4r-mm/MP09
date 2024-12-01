@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #a5d19f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .login-form input {
+          background-color: #e3e3e3c5;
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            transition: border-color 0.3s;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-form button:hover {
+            background-color: #218838;
+        }
+        .message {
+            margin-top: 15px;
+            text-align: center;
+            color: #333;
+        }
+        .message a {
+            color: #28a745;
+            text-decoration: none;
+        }
+        .message a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form">
+    <form class="login-form">
+      <input type="text" placeholder="usuari" required/>
+      <input type="password" placeholder="contrasenya" required/>
+      <button type="submit">login</button>
+      <p class="message">Not estas registrat? <a href="#">Crear un nou compte</a></p>
+    </form>
+</div>
+
+</body>
+</html>
