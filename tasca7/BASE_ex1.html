@@ -1,0 +1,89 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
+    <style>
+        body{
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+            font-size: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            background-color: #d3d3d3;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 10px 0;
+            width: 40%;
+            gap: 3px;
+        }
+
+        /* Primer */
+        div:first-child::before {
+            content: "Charlie";
+            padding-top: 75px;
+        }
+        div:first-child::after {
+            content: "Chaplin";
+            padding-top: 75px;
+        }
+
+        /* Segon */
+        div:nth-child(2)::before {
+            content: "Charlie";
+            padding-top: 0px;
+        }
+        div:nth-child(2)::after {
+            content: "Chaplin";
+            padding-top: 0px;
+        }
+
+        /* Tercer */
+        div:nth-child(3)::before {
+            content: "Charlie";
+            padding-top: 30px;
+        }
+        div:nth-child(3)::after {
+            content: "Chaplin";
+            padding-top: 30px;
+        }
+
+        /* Quart */
+        div:last-child::before {
+            content: "Charlie";
+            padding-top: 60px;
+        }
+        div:last-child::after {
+            content: "Chaplin";
+            padding-top: 60px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <img src="./img/charlie.jpg" alt="Charlie Chaplin"/>
+    </div>
+    <div>
+        <img class="aa" src="./img/charlie.jpg" alt="Charlie Chaplin"/>
+    </div>
+    <div>
+        <img class="bb" src="./img/charlie.jpg" alt="Charlie Chaplin"/>
+    </div>
+    <div>
+        <img class="cc" src="./img/charlie.jpg" alt="Charlie Chaplin"/>
+    </div>
+
+</body>
+</html>
