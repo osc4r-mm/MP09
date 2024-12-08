@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>GridBox</title>
+        <style>
+
+            #id_cap { 
+                grid-area: cap;
+                background-color: plum;
+            }
+
+            #id_nav { 
+                grid-area: nav;
+                background-color: cadetblue;
+            }
+
+            #id_art { 
+                grid-area: art;
+                background-color: aliceblue;
+            }
+                
+            #id_inf { 
+                grid-area:  inf;
+                background-color: cadetblue;
+            }
+
+            #id_peu { 
+                grid-area: peu;
+                background-color: plum;
+            }
+
+            #main {
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px 60px 1fr 100px 80px;
+                grid-template-areas:
+                                    "cap"
+                                    "nav"
+                                    "art"
+                                    "inf"
+                                    "peu";
+                width: 740px;
+                min-height: 100vh;
+                margin: 0 auto;  
+            }                      
+
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="id_cap">Capçalera</div>
+            <div id="id_nav">Navegació</div>
+            <div id="id_art">Articles</div>
+            <div id="id_inf">Info Articles</div>
+            <div id="id_peu">Peu de pàgina</div>
+        </div>
+    </body>
+</html>
