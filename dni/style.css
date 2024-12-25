@@ -1,0 +1,236 @@
+p {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.dni-container {
+    perspective: 1000px;
+    width: 350px;
+    height: 220px;
+    margin: 50px auto;
+}
+
+.dni-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    cursor: pointer;
+}
+
+.dni-container:hover .dni-card {
+    transform: rotateY(180deg);
+}
+
+.dni-front, .dni-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    padding: 15px 10px 10px 10px;
+    box-sizing: border-box;
+}
+
+.dni-front {
+    background-image: url(img/front.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dni-back {
+    background-image: url(img/back.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateY(180deg);
+}
+
+.dni-header {
+    display: flex;
+    gap: 10px;
+}
+
+.dni-header .emblem {
+    width: 40px;
+    height: 25px;
+}
+
+.dni-header .icon {
+    width: 22px;
+    height: 13px;
+    margin-left: 45px;
+}
+
+.dni-header p {
+    margin-top: -5px;
+}
+
+.dni-header .title {
+    color: #081673;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.dni-header .subtitle {
+    color: #a44a4b;
+    font-size: 0.48rem;
+    margin-top: -5px;
+}
+
+.dni-secondary-header {
+    display: flex;
+    gap: 10px;
+}
+
+.dni-secondary-header .small-dni {
+    font-size: 0.3rem;
+}
+
+.dni-secondary-header .field {
+    margin-left: 90px;
+    margin-top: 5px;
+    font-size: 0.6rem;
+}
+
+.dni-secondary-header .value{
+    font-family: fangsong;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.dni-content {
+    display: flex;
+}
+
+.dni-photo {
+    width: 120px;
+    height: 150px;
+    background-color: #ccc;
+}
+
+.dni-photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.dni-data {
+    font-family: Arial, sans-serif;
+    margin-left: 10px;
+}
+
+.dni-data div {
+    display: flex;
+}
+
+.dni-data p {
+    margin: 0 10px 5px 0;
+}
+
+.dni-data .field {
+    font-weight: bold;
+    font-size: 0.3rem;
+}
+
+.dni-data .value {
+    font-size: 0.5rem;
+}
+
+.dni-data .img-code {
+    background-image: url(img/img-code.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 35px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 25%;
+    position: relative;
+    bottom: 40px;
+    right: -150px;
+}
+
+.dni-data .img-code img {
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.dni-data .img-code span {
+    position: absolute;
+    color: #111111;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+}
+
+.dni-data .code {
+    position: relative;
+    bottom: 30px;
+    right: -150px;
+}
+
+.dni-firma {
+    width: 150px;
+    height: 35px;
+    position: relative;
+    bottom: 65px;
+}
+
+.dni-firma img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dni-data .dni-text {
+    position: relative;
+    bottom: 70px;
+    font-size: 0.4rem;
+}
+
+/* trasera */
+
+.dni-back .equip {
+    position: relative;
+    bottom: 157px;
+    right: 160px;
+    transform: rotate(270deg);
+    font-size: 0.5rem;
+    rotate: 90;
+    text-align: center;
+}
+
+.dni-back .dni-data .algo {
+    flex-direction: column;
+}
+
+.dni-back .dni-data .algo p {
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+.dni-chip {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: 50px;
+    height: 40px;
+    background-image: url(img/chip.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.mrz-zone {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    padding: 10px 0;
+}
