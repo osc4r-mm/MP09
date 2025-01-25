@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Acadèmia esTUdia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- CAPÇALERA -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(40, 187, 156);">
+        <div class="container-fluid d-flex justify-content-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inici</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cursos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- CARRUSEL -->
+<section id="carrusel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicadors del carrusel -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" style="width: 80%; margin: 0 auto;">
+        <!-- Diapositiva 1 -->
+        <div class="carousel-item active">
+            <img src="img1.jpg" class="d-block w-100" alt="Imatge del carrusel">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Acadèmia esTUdia</h1>
+                <p>Us facilitem l'obtenció de títols oficials</p>
+                <div class="d-flex flex-column align-items-center">
+                    <img src="thumbsup.svg" class="mb-3" alt="Imatge del carrusel" style="width:25px; height: 25px;">
+                </div>
+                <a href="#" class="btn btn-primary">Més informació</a>
+            </div>
+        </div>
+        <!-- Diapositiva 2 -->
+        <div class="carousel-item">
+            <img src="img1.jpg" class="d-block w-100" alt="Imatge del carrusel">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Acadèmia esTUdia</h1>
+                <p>Assoleix les competències TIC</p>
+                <div class="d-flex flex-column align-items-center">
+                    <img src="thumbsup.svg" class="mb-3" alt="Imatge del carrusel" style="width:25px; height: 25px;">
+                </div>
+                <a href="#" class="btn btn-primary">Més informació</a>
+            </div>
+        </div>
+        <!-- Diapositiva 3 -->
+        <div class="carousel-item">
+            <img src="img1.jpg" class="d-block w-100" alt="Imatge del carrusel">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Acadèmia esTUdia</h1>
+                <p>Millora la teva fluïdesa en llengües estrangeres</p>
+                <div class="d-flex flex-column align-items-center">
+                    <img src="thumbsup.svg" class="mb-3" alt="Imatge del carrusel" style="width:25px; height: 25px;">
+                </div>
+                <a href="#" class="btn btn-primary">Més informació</a>
+            </div>
+        </div>
+    </div>
+    <!-- Controls del carrusel -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Següent</span>
+    </button>
+</section>
+
+<!-- SECCIÓ CENTRAL -->
+<section id="mesInformacio" class="my-5">
+    <div class="text-center mb-4">
+        <h2>Preparem el vostre futur</h2>
+    </div>
+    <div class="row border-bottom border-top m-3">
+        <div class="col-md-4">
+            <div class="h-100">
+                <div class="card-body">
+                    <h3 class="card-title">Títols homologats</h3>
+                    <p class="card-text">Organitzem cursos per completar la vostra formació reglada. Per això us ajudem a preparar la prova d’accés a grau mig i superior, així com cursos de reforç per a batxillerat.</p>
+                    <a href="#" class="btn btn-primary">Més...</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="h-100">
+                <div class="card-body">
+                    <h3 class="card-title">Competències</h3>
+                    <p class="card-text">Oferim la certificació de nivell mitjà i avançat per tal d’acreditar la vostra competència TIC. Alhora, organitzem cursos específics de programació i disseny web.</p>
+                    <a href="#" class="btn btn-primary">Més...</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="h-100">
+                <div class="card-body">
+                    <h3 class="card-title">Idiomes</h3>
+                    <p class="card-text">Avui en dia és indispensable poder demostrar un nivell intermedi o avançat en llengües estrangeres. Segueix el nostre pla per aconseguir millorar el teu nivell.</p>
+                    <a href="#" class="btn btn-primary">Més...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white text-center py-3 m-2 fixed-bottom">
+    <h5>Acadèmia esTUdia</h5>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

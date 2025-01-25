@@ -1,0 +1,35 @@
+#carrusel {
+    background: linear-gradient(to right, rgb(129, 219, 202), rgb(65, 194, 168));
+}
+
+.carousel-item img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.row.border-top,
+.row.border-bottom {
+    border-width: 1px;
+    border-color: #dee2e6;
+    padding: 25px 10px 25px 10px;
+}
+
+.btn-primary {
+    background-color: rgb(40, 187, 156);
+    border-color: rgb(40, 187, 156);
+}
+
+.btn-primary:hover {
+    background-color: rgb(37, 150, 125);
+    border-color: rgb(37, 150, 125);
+}
+
+footer {
+    background-color: rgb(40, 187, 156);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    padding: 20px;
+}
