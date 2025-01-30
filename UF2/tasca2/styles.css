@@ -1,3 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#mesInformacio {
+    flex: 1;
+    margin-bottom: 60px;
+}
+
 #carrusel {
     background: linear-gradient(to right, rgb(129, 219, 202), rgb(65, 194, 168));
 }
@@ -5,13 +16,6 @@
 .carousel-item img {
     height: 300px;
     object-fit: cover;
-}
-
-.row.border-top,
-.row.border-bottom {
-    border-width: 1px;
-    border-color: #dee2e6;
-    padding: 25px 10px 25px 10px;
 }
 
 .btn-primary {
@@ -22,14 +26,102 @@
 .btn-primary:hover {
     background-color: rgb(37, 150, 125);
     border-color: rgb(37, 150, 125);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 150, 125, 0.3);
+}
+
+.custom-toast {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+    animation: slideInRight 0.3s ease-out forwards;
+    transition: all 0.3s;
+}
+
+.custom-toast.hide {
+    animation: slideOutDown 0.3s ease-out forwards;
+}
+
+.custom-toast .toast-header {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px 15px 0 0;
+}
+
+.custom-toast .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.custom-toast .btn-light {
+    background: rgba(255, 255, 255, 0.9);
+    color: #FF6B6B;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.custom-toast .btn-light:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutDown {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(40, 187, 156, 0.2);
+}
+
+.spinner-grow {
+    color: rgb(40, 187, 156);
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 20px;
+}
+
+.form-control:focus {
+    border-color: rgb(40, 187, 156);
+    box-shadow: 0 0 0 0.25rem rgba(40, 187, 156, 0.25);
+}
+
+.modal-content {
+    border: none;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
 }
 
 footer {
     background-color: rgb(40, 187, 156);
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 10%;
-    padding: 20px;
+    margin-top: auto;
+    position: relative;
+    transition: margin-top 0.3s ease;
+    z-index: 1;
 }
