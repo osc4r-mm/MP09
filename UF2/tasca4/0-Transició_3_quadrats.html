@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        gap: 100px;
+        background-color: #222;
+        margin: 0;
+        padding: 20px;
+        perspective: 1000px;
+    }
+    div {
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+    .ample {
+        background-color: #bdd6f4;
+        border: 2px solid #4e8cd8;
+        animation: pulso 2s infinite alternate;
+        position: relative;
+    }
+    @keyframes pulso {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.2); }
+    }
+    .ample:hover {
+        animation: giro 1s ease-in-out infinite;
+    }
+    @keyframes giro {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .marc {
+        background-color: #ebb7b7;
+        border: 2px solid #d84e4e;
+        position: relative;
+        overflow: hidden;
+    }
+    .marc::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: conic-gradient(transparent, rgba(255,255,255,0.4), transparent);
+        animation: rotar 3s linear infinite;
+    }
+    @keyframes rotar {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .marc:hover {
+        animation: salto 2s ease-in-out infinite;
+    }
+    @keyframes salto {
+        0% { transform: translateY(0) perspective(500px) rotateY(0deg); }
+        25% { transform: translateY(-100px) rotateY(180deg); }
+        50% { transform: translateY(0) perspective(500px) rotateY(0deg); }
+        75% { transform: translateY(-100px) rotateY(-180deg); }
+        100% { transform: translateY(0) perspective(500px) rotateY(0deg); }
+    }
+
+    .color {
+        background-color: #caebb7;
+        border: 2px solid #5b973b;
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+    .color:hover {
+        animation: temblar 0.1s ease infinite;
+    }
+    @keyframes temblar {
+        0% { transform: translateX(-5px); }
+        25% { transform: translateY(5px); }
+        50% { transform: translateX(5px); }
+        75% { transform: translateY(-5px); }
+        100% { transform: translateX(-5px); }
+    }
+    .color::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+        animation: brillo 2.5s linear infinite;
+        z-index: -1;
+    }
+    @keyframes brillo {
+        0% { left: -40%; }
+        50% { left: 40%; }
+        100% { left: -40%; }
+    }
+</style>
+</head>
+<body>
+<div class="ample"></div>
+<div class="marc"></div>
+<div class="color"></div>
+<script>
+document.querySelectorAll('div').forEach(div => {
+  div.addEventListener('click', function() {
+    this.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+  });
+});
+</script>
+</body>
+</html>

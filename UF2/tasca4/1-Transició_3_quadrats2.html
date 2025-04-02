@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            gap: 20px;
+            background-color: #222;
+            margin: 0;
+            padding: 20px;
+            perspective: 1000px;
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .alt {
+            background-color: #f4e4bd;
+            border: 2px solid #ca8f00;
+            transition: height 0.5s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        .alt:hover {
+            height: 40px;
+        }
+
+        .radio {
+            background-color: #e4bdff;
+            border: 2px solid #7700ca;
+            cursor: pointer;
+            transition: border-radius 0.5s ease;
+        }
+
+        .radio:hover {
+            border-radius: 35px;
+        }
+
+        .radio.shuriken {
+            border-radius: 35px;
+            animation: shuriken 5s forwards;
+        }
+
+        @keyframes shuriken {
+            0% {
+                transform: translate(0vw, 0vh) rotate(0deg);
+            }
+            5% {
+                transform: translate(40vw, 40vh) rotate(180deg);
+            }
+            10% {
+                transform: translate(10vw, -30vh) rotate(360deg);
+            }
+            15% {
+                transform: translate(-40vw, 45vh) rotate(540deg);
+            }
+            20% {
+                transform: translate(35vw, 10vh) rotate(720deg);
+            }
+            25% {
+                transform: translate(-45vw, -25vh) rotate(900deg);
+            }
+            30% {
+                transform: translate(20vw, 50vh) rotate(1080deg);
+            }
+            35% {
+                transform: translate(-30vw, 30vh) rotate(1260deg);
+            }
+            40% {
+                transform: translate(45vw, -25vh) rotate(1440deg);
+            }
+            45% {
+                transform: translate(-20vw, -45vh) rotate(1620deg);
+            }
+            50% {
+                transform: translate(40vw, -10vh) rotate(1800deg);
+            }
+            55% {
+                transform: translate(-45vw, 25vh) rotate(1980deg);
+            }
+            60% {
+                transform: translate(25vw, -45vh) rotate(2160deg);
+            }
+            65% {
+                transform: translate(-35vw, 10vh) rotate(2340deg);
+            }
+            70% {
+                transform: translate(50vw, 40vh) rotate(2520deg);
+            }
+            75% {
+                transform: translate(-45vw, -50vh) rotate(2700deg);
+            }
+            80% {
+                transform: translate(10vw, -15vh) rotate(2880deg);
+            }
+            85% {
+                transform: translate(-40vw, -35vh) rotate(3060deg);
+            }
+            90% {
+                transform: translate(-10vw, 40vh) rotate(3240deg);
+            }
+            95% {
+                transform: translate(25vw, -35vh) rotate(3420deg);
+                width: 100px;
+            }
+            100% {
+                transform: translate(0vw, 15vh) rotate(0deg);
+                width: 200px;
+            }
+        }
+
+        .girar {
+            background-color: #fbffbd;
+            border: 2px solid #b2bd00;
+            color: #b2bd00;
+        }
+
+        .girar:hover {
+            animation: giro 3.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+        }
+
+        @keyframes giro {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+            25% {
+                transform: scale(0.6) rotate(-90deg);
+            }
+            50% {
+                transform: scale(1.5) rotate(90deg);
+            }
+            75% {
+                transform: scale(2) rotate(360deg);
+            }
+            100% {
+                transform: scale(0.8) rotate(180deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="alt"></div>
+    <div class="radio"></div>
+    <div class="girar"></div>
+
+    <script>
+        const shuriken = document.querySelector('.radio');
+        
+        shuriken.addEventListener('click', function() {
+          this.classList.toggle('shuriken');
+        });
+
+      </script>
+</body>
+
+</html>

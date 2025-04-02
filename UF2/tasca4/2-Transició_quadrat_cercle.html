@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #222;
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: #ef476f;
+            border: 2px solid #c63c61;
+            transition: all 1.2s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: transparent;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+        
+        div:hover {
+            transform: rotate(720deg) scale(0.8);
+            border-radius: 50% 0 50% 0;
+            height: 120px;
+            width: 120px;
+            border: 8px dashed #073b4c;
+            background-color: #06d6a0;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        div:after {
+            content: "¡WOW!";
+        }
+    </style>
+
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
